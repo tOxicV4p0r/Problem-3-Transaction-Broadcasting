@@ -4,10 +4,10 @@
 This module can broadcast a transaction of cryptocurrency price and monitor its status until it is confirmed or failed. It supports multiple currencies like `ETH` and `BTC` and so on.
 
 ## Features
-- Broadcasts transactions with `symbol`, `price`, and `timestamp` then wait until it is confirmed or failed after that return transaction status and hash.
+- Broadcasts transactions with `symbol`, `price`, and `timestamp`, then waits until the transaction is either confirmed or failed before returning the transaction hash and status.
 
 ## Example usage 
-Broadcasting and Monitoring a Transaction
+Broadcasting and Monitoring a Transaction:
    ```javascript
     const { broadcastAndCheckTransactionStatus } = require('./BroadcastTransaction');
 
@@ -26,11 +26,11 @@ Broadcasting and Monitoring a Transaction
    ```
 ## Transaction Status
 Each transaction status returned by the module indicates a different state of the transaction in the blockchain network.
-* **`PENDING`** Transaction is awaiting processing
-* **`COINFIRMED`** Transaction has been processed and confirmed
-* **`FAILED`** Transaction failed to process
-* **`DNE`** Transaction does not exist
-* **`TIMEOUT`** Reaches the maximum of waiting time without a confirmed or failed status
+* `PENDING` Transaction is awaiting processing.
+* `CONFIRMED` Transaction has been processed and confirmed.
+* `FAILED` Transaction failed to process.
+* `DNE` Transaction does not exist.
+* `TIMEOUT` Exceeds the maximum waiting time without a confirmed or failed status.
 
 ## Integrate To Existing Project
 1. For this module, you need `axios` for making HTTP requests
