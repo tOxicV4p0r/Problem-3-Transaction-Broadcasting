@@ -77,7 +77,7 @@ async function checkTransactionStatus(txHash) {
  * @param {number} maxRetry - Maximum retry
  * @returns {Promise<string>} Promise that wait until its status is confirmed or failed
  */
-async function monitorTransactionStatus(txHash, maxRetry = 10) {
+async function monitorTransactionStatus(txHash, maxRetry = 12) {
     if (!txHash || typeof txHash !== 'string') {
         throw new Error('Invalid argument');
     }
